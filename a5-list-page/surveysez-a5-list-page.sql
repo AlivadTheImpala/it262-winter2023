@@ -91,11 +91,11 @@ INSERT INTO winter2023_questions VALUES (NULL,2,'What style of art do you enjoy'
 INSERT INTO winter2023_questions VALUES (NULL,2,'If you draw what is your preferred drawing medium?','What tools do artists like to use.',NOW(),NOW());
 
 -- 7
-INSERT INTO winter2023_questions VALUES (NULL,3,'If you draw what is your preferred drawing medium?','What tools do artists like to use.',NOW(),NOW());
+INSERT INTO winter2023_questions VALUES (NULL,3,'What is the name of Spongebobs best friend in your opinion?','Desc',NOW(),NOW());
 -- 8
-INSERT INTO winter2023_questions VALUES (NULL,3,'If you draw what is your preferred drawing medium?','What tools do artists like to use.',NOW(),NOW());
+INSERT INTO winter2023_questions VALUES (NULL,3,'What is Spongebobs occupation?','Desc',NOW(),NOW());
 -- 9
-INSERT INTO winter2023_questions VALUES (NULL,3,'If you draw what is your preferred drawing medium?','What tools do artists like to use.',NOW(),NOW());
+INSERT INTO winter2023_questions VALUES (NULL,3,'What is the song that spongebob plays around a campfire?','Desc',NOW(),NOW());
 
 
 CREATE TABLE winter2023_answers(
@@ -129,10 +129,36 @@ INSERT INTO winter2023_answers VALUES (NULL,3,'Yes I enjoy multiplayer games wit
 INSERT INTO winter2023_answers VALUES (NULL,3,'Pineapple','',NOW(),NOW(),0);
 INSERT INTO winter2023_answers VALUES (NULL,3,'No I do not enjoy gaming','',NOW(),NOW(),0);
 
-INSERT INTO winter2023_answers VALUES (NULL,4,'No I do not enjoy gaming','',NOW(),NOW(),0);
-INSERT INTO winter2023_answers VALUES (NULL,4,'No I do not enjoy gaming','',NOW(),NOW(),0);
-INSERT INTO winter2023_answers VALUES (NULL,4,'No I do not enjoy gaming','',NOW(),NOW(),0);
-INSERT INTO winter2023_answers VALUES (NULL,4,'No I do not enjoy gaming','',NOW(),NOW(),0);
+INSERT INTO winter2023_answers VALUES (NULL,4,'I draw every day','',NOW(),NOW(),0);
+INSERT INTO winter2023_answers VALUES (NULL,4,'I draw every few days','',NOW(),NOW(),0);
+INSERT INTO winter2023_answers VALUES (NULL,4,'I draw occasionally','',NOW(),NOW(),0);
+INSERT INTO winter2023_answers VALUES (NULL,4,'I dont draw','',NOW(),NOW(),0);
+
+INSERT INTO winter2023_answers VALUES (NULL,5,'I enjoy pop art','',NOW(),NOW(),0);
+INSERT INTO winter2023_answers VALUES (NULL,5,'Surreal art is my cup of tea','',NOW(),NOW(),0);
+INSERT INTO winter2023_answers VALUES (NULL,5,'Manga style is where its at!','',NOW(),NOW(),0);
+INSERT INTO winter2023_answers VALUES (NULL,5,'I enjoy art from the classical masters','',NOW(),NOW(),0);
+
+INSERT INTO winter2023_answers VALUES (NULL,6,'I Draw digitally','',NOW(),NOW(),0);
+INSERT INTO winter2023_answers VALUES (NULL,6,'I enjoy working with graphite','',NOW(),NOW(),0);
+INSERT INTO winter2023_answers VALUES (NULL,6,'I like graphite and charcoal','',NOW(),NOW(),0);
+INSERT INTO winter2023_answers VALUES (NULL,6,'Paints are superior','',NOW(),NOW(),0);
+
+INSERT INTO winter2023_answers VALUES (NULL,7,'Squidward','',NOW(),NOW(),0);
+INSERT INTO winter2023_answers VALUES (NULL,7,'Gary','',NOW(),NOW(),0);
+INSERT INTO winter2023_answers VALUES (NULL,7,'Patrick Star','',NOW(),NOW(),0);
+INSERT INTO winter2023_answers VALUES (NULL,7,'Sandy Cheeks','',NOW(),NOW(),0);
+INSERT INTO winter2023_answers VALUES (NULL,7,'Bubble Buddy','',NOW(),NOW(),0);
+
+INSERT INTO winter2023_answers VALUES (NULL,8,'Certified Fry Cook','',NOW(),NOW(),0);
+INSERT INTO winter2023_answers VALUES (NULL,8,'Artist','',NOW(),NOW(),0);
+INSERT INTO winter2023_answers VALUES (NULL,8,'Security','',NOW(),NOW(),0);
+INSERT INTO winter2023_answers VALUES (NULL,8,'Vocalist','',NOW(),NOW(),0);
+
+INSERT INTO winter2023_answers VALUES (NULL,9,'Sweet Victory','',NOW(),NOW(),0);
+INSERT INTO winter2023_answers VALUES (NULL,9,'Ripped Pants','',NOW(),NOW(),0);
+INSERT INTO winter2023_answers VALUES (NULL,9,'C.A.M.P.F.I.R.E.S.O.N.G Song','',NOW(),NOW(),0);
+INSERT INTO winter2023_answers VALUES (NULL,9,'F.U.N','F is for friends who do stuff together, U is for URANIUM... BOMB!',NOW(),NOW(),0);
 
 CREATE TABLE winter2023_responses(
 ResponseID INT UNSIGNED NOT NULL AUTO_INCREMENT,

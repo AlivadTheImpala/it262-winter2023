@@ -1,4 +1,5 @@
 <?php
+
 /**
  * demo_idb.php is both a test page for your IDB shared mysqli connection, and a starting point for 
  * building DB applications using IDB connections
@@ -17,7 +18,7 @@
 require '../inc_0700/config_inc.php'; #provides configuration, pathing, error handling, db credentials
 
 $config->titleTag = smartTitle(); #Fills <title> tag. If left empty will fallback to $config->titleTag in config_inc.php
-$config->metaDescription = smartTitle() . ' - ' . $config->metaDescription; 
+$config->metaDescription = smartTitle() . ' - ' . $config->metaDescription;
 /*
 $config->metaDescription = 'Web Database ITC281 class website.'; #Fills <meta> tags.
 $config->metaKeywords = 'SCCC,Seattle Central,ITC281,database,mysql,php';
@@ -39,25 +40,23 @@ $sql = "select FirstName, LastName, Email from test_Customers";
 get_header(); #defaults to header_inc.php
 ?>
 <h3 align="center"><?php echo $config->titleTag; ?></h3>
-<p>This page  is both a test page for your IDB shared mysqli connection, and a starting point for 
- * building DB applications using IDB connections</p>
+<p>This page is both a test page for your IDB shared mysqli connection, and a starting point for
+	* building DB applications using IDB connections</p>
 <p>creates a singleton (shared) mysqli connection via a class named IDB</p>
 <?php
 #IDB::conn() creates a shareable database connection via a singleton class
-$result = mysqli_query(IDB::conn(),$sql) or die(trigger_error(mysqli_error(IDB::conn()), E_USER_ERROR));
+$result = mysqli_query(IDB::conn(), $sql) or die(trigger_error(mysqli_error(IDB::conn()), E_USER_ERROR));
 
 echo '<div align="center"><h4>SQL STATEMENT: <font color="red">' . $sql . '</font></h4></div>';
-if(mysqli_num_rows($result) > 0)
-{#there are records - present data
-	while($row = mysqli_fetch_assoc($result))
-	{# pull data from associative array
-	   echo '<p>';
-	   echo 'FirstName: <b>' . $row['FirstName'] . '</b><br />';
-	   echo 'LastName: <b>' . $row['LastName'] . '</b><br />';
-	   echo 'Email: <b>' . $row['Email'] . '</b><br />';
-	   echo '</p>';
+if (mysqli_num_rows($result) > 0) { #there are records - present data
+	while ($row = mysqli_fetch_assoc($result)) { # pull data from associative array
+		echo '<p>';
+		echo 'FirstName: <b>' . $row['FirstName'] . '</b><br />';
+		echo 'LastName: <b>' . $row['LastName'] . '</b><br />';
+		echo 'Email: <b>' . $row['Email'] . '</b><br />';
+		echo '</p>';
 	}
-}else{#no records
+} else { #no records
 	echo '<div align="center">Sorry, there are no records that match this query</div>';
 }
 @mysqli_free_result($result);
